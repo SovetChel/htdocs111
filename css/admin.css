@@ -1,0 +1,162 @@
+div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px var(--color-shadow-default);
+    padding: 10px 10px;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: .5em 1em;
+    transition: .2s;
+    z-index: 9999;
+}
+div > a:hover {
+    color: #fff;
+    background: var(--color-bg-active);
+    box-shadow: 0 0 5px 2px var(--color-shadow-default);
+}
+div > .active {
+    box-shadow: 0 2px 10px var(--color-bg-active);
+}
+
+.wrapper {
+    height: 100%;
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form {
+    padding: 0;
+    gap: 0;
+}
+form input:not(input[type="submit"]),
+form textarea {
+    width: 100%;
+}
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+}
+form h1 {
+    width: 100%;
+    text-align: center;
+    border-radius: 0px 0px 0 0;
+    padding: 10px 25px;
+    color: #fff;
+    background: #333;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+form > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+form label {
+    font-weight: 500;
+    color: #fff;
+    background: #333;
+    padding: 5px 15px;
+    border-radius: 0px 0px 0 0;
+}
+form input[type="file"] {
+    border-top-left-radius: 0;
+}
+form .radio-container {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px var(--color-shadow-default);
+    overflow: hidden;
+}
+form .radio-container > label:first-child {
+    text-align: center;
+    width: 100%;
+}
+form .radio-container > label:not(label:first-child) {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border-radius: none;
+}
+form input[type="radio"] {
+    display: none;
+}
+form input[type="radio"] + span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 25px;
+    font-weight: 500;
+    color: #333;
+    background: transparent;
+    cursor: pointer;
+    transition: .2s;
+}
+form input[type="radio"] + span::before {
+    content: "";
+    margin-right: 10px;
+    padding: 3px;
+    border-radius: 0;
+    border: 2px solid #333;
+    transition: .2s;
+}
+form input[type="radio"]:checked + span {
+    color: #000;
+}
+form input[type="radio"]:checked + span::before {
+    background: var(--color-bg-active);
+    border-color: var(--color-bg-active);
+}
+form input[type="radio"] + span:hover::before {
+    border-color: var(--color-bg-active);
+}
+
+.radio-container > a {
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 5px var(--color-shadow-default);
+}
+
+.error-mes {
+    padding: 10px 25px;
+    background: #ffd1d1;
+    border-radius: 0px;
+    font-weight: 500;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+}
+
+.categories {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: #f1f1f1;
+    border-radius: 0 0 0px 0px;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+}
+.categories::before {
+    content: "Список категорий";
+    font-size: 18px;
+    font-weight: 500;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px 0px 0 0;
+    width: 100%;
+    padding: 10px 25px;
+}
+.categories > a {
+    background: #fff;
+    margin: 15px;
+}
+
+.remove-link {
+    margin-bottom: 10px;
+}

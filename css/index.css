@@ -1,0 +1,70 @@
+form {
+    background: transparent;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    box-shadow: none;
+}
+input[type="search"] {
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    padding: 10px 25px;
+    max-width: 350px;
+    width: 100%;
+    font-size: 16px;
+    background: #fff;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+}
+
+.content {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    /* flex: 25%; */
+    flex-direction: column;
+    padding-bottom: 10px;
+    gap: 10px;
+    color: #000;
+    border-radius: 0px;
+    overflow: hidden;
+    background: #fff;
+    transition: .2s;
+    cursor: pointer;
+}
+.card:nth-child(4n) {
+    margin-right: 0;
+}
+.card img {
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+}
+.card p {
+    margin: 0 15px;
+}
+.card span {
+    letter-spacing: .1em;
+    border-radius: 0px;
+    padding: .4em 1em;
+    margin: auto auto 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    /* background: rgba(0, 166, 255, 0.4); */
+}
+.card:hover {
+    box-shadow: 0 2px 5px var(--color-shadow-default);
+}
+
+.content > h1 {
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}

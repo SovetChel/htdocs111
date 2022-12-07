@@ -1,0 +1,139 @@
+button {
+    outline: none;
+    border: none;
+    color: #000;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+    user-select: none;
+    transition: .2s;
+    cursor: pointer;
+}
+button:hover {
+    color: #fff;
+    background: #ff1c1c;
+}
+button:active {
+    transform: scale(0.98);
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-radius: 0px;
+    padding: 15px 25px;
+    background: #fff;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+}
+.order * {
+    white-space: nowrap;
+    font-weight: 500;
+}
+/* .order::after {
+    position: absolute;
+    content: "Нажмите чтобы узнать подробности";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: .2s;
+}
+.order:hover {
+    box-shadow: 0 3px 5px var(--color-bg-active);
+}
+.order:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+} */
+
+.order .name {
+    width: 100%;
+}
+.order .price {
+    letter-spacing: .1em;
+}
+
+.content h1 {
+    text-align: center;
+    font-weight: 500;
+}
+
+#order-cancel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+    z-index: 99999;
+}
+#order-cancel * {
+    font-weight: 500;
+}
+#order-cancel > * {
+    max-width: 720px;
+    width: 100%;
+    box-shadow: 0 0 5px #222;
+}
+#order-cancel > p {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 25px;
+    margin: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 0px 0px 0 0;
+}
+#order-cancel > form {
+    background: #f1f1f1;
+    border-radius: 0 0 0px 0px;
+}
+#order-cancel > form p {
+    width: 100%;
+    margin: 0;
+}
+.order-cancel--show {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+#close-order-cancel {
+    position: absolute;
+    line-height: 0px;
+    top: 50%;
+    right: 15px;
+    padding: 15px;
+    transform: translateY(-50%);
+    box-shadow: none;
+}
+#close-order-cancel::after {
+    content: "×";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+#close-order-cancel:hover {
+    background: #ff1b1b;
+}

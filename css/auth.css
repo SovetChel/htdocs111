@@ -1,0 +1,33 @@
+header {
+    gap: 0;
+    padding: 0;
+}
+header .logo {
+    padding: 15px 25px;
+    min-width: 100%;
+    margin: 0 !important;
+}
+
+.wrapper,
+.content {
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content > a {
+    margin-top: 25px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 0px;
+    box-shadow: 0 3px 5px var(--color-shadow-default);
+}
+.content > a:hover {
+    background: #333;
+    color: #fff;
+}
